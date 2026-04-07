@@ -20,7 +20,7 @@ O objetivo desta atividade é desenvolver um jogo interativo de remoção de cor
    No terminal, dentro da pasta do projeto, execute:
    ```
    cd build
-   cmake --build . --target M3
+   cmake --build .
    ```
    Após a compilação, execute o programa com:
    ```
