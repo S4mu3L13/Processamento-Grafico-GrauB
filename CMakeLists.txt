@@ -41,10 +41,16 @@ include_directories(${stb_image_SOURCE_DIR})
 # Lista de exercícios/projetos (um diretório para cada)
 # OBS.: Não pode ter acentos ou caracteres especiais
 set(EXERCISES
-    Exercicios/M2
+  Exercicios/M2
+  Exercicios/M3
 )
 
 add_compile_options(-Wno-pragmas)
+
+# Ensure console subsystem for MinGW on Windows
+if(MINGW)
+    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,--subsystem,console")
+endif()
 
 # Define as bibliotecas para cada sistema operacional
 if(WIN32)
