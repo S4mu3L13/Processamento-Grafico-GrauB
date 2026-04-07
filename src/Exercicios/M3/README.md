@@ -41,4 +41,4 @@ O objetivo desta atividade é desenvolver um jogo interativo de remoção de cor
 - Quando todos os retângulos são removidos, a mensagem `FIM DE JOGO` aparece no título.
 - O console exibe informações de cada movimento (removidos, ganho de pontos).
 
-![Resultado da Execução](M3.gif)
+![Resultado da Execução](M3-gif.gif)
