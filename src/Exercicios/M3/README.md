@@ -1,4 +1,4 @@
-# Desafio M3 - Jogo de Cores
+# Desafio M3 - Jogo das Cores
 
 ## Resumo da Atividade
 
