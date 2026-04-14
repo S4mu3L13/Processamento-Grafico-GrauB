@@ -12,10 +12,10 @@
 #include <glm/gtc/type_ptr.hpp>  
 #include "stb_image.h"           
 
-// Constantes da dimensão da janela
+// Dimensão da janela
 const GLint WIDTH = 1024, HEIGHT = 768;
 
-// Estrutura que armazena dados de cada adesivo/marca na cena
+// Estrutura que armazena dados de cada adesivo na cena
 struct Sticker {
     glm::vec2 position;  
     float rotation;      
@@ -129,7 +129,7 @@ void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
             float top = stickers[i].position.y + 150.0f * stickers[i].scale;
             
             if (mouseX >= left && mouseX <= right && mouseY >= bottom && mouseY <= top) {
-                selectedStickerIndex = i;  // Seleciona adesivo existente
+                selectedStickerIndex = i;
                 selectedStickerType = -1;
                 clickedOnSticker = true;
                 break;
@@ -320,13 +320,13 @@ int main() {
     // Exibe controles disponíveis
     std::cout << "\n=== CONTROLES DE ADESIVOS ===" << std::endl;
     std::cout << "1-4:          Selecionar tipo de adesivo para adicionar" << std::endl;
-    std::cout << "CLIQUE:       Adicionar adesivo selecionado na posição do clique" << std::endl;
+    std::cout << "CLIQUE:       Adicionar adesivo selecionado na posicao do clique" << std::endl;
     std::cout << "              (ou selecionar adesivo existente para editar)" << std::endl;
     std::cout << "Setas:        Mover adesivo selecionado" << std::endl;
     std::cout << "Q/W:          Rotacionar adesivo selecionado" << std::endl;
     std::cout << "E/R:          Aumentar/diminuir escala do adesivo selecionado" << std::endl;
-    std::cout << "H:            Inverter horizontalmente (flip H)" << std::endl;
-    std::cout << "V:            Inverter verticalmente (flip V)" << std::endl;
+    std::cout << "H:            Inverter horizontalmente" << std::endl;
+    std::cout << "V:            Inverter verticalmente" << std::endl;
     std::cout << "\n=== FILTROS DE IMAGEM ===" << std::endl;
     std::cout << "F1:           Sem filtro" << std::endl;
     std::cout << "F2:           Filtro escala de cinza" << std::endl;
@@ -364,17 +364,17 @@ int main() {
 
             // Q/W: Rotação do adesivo
             if (glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS)
-                stickers[selectedStickerIndex].rotation -= 3.0f;  // Rotação anti-horária
+                stickers[selectedStickerIndex].rotation -= 3.0f;  
             if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-                stickers[selectedStickerIndex].rotation += 3.0f;  // Rotação horária
+                stickers[selectedStickerIndex].rotation += 3.0f;  
 
             // E/R: Escala  do adesivo
             if (glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS)
-                stickers[selectedStickerIndex].scale -= 0.05f;  // Diminui tamanho
+                stickers[selectedStickerIndex].scale -= 0.05f;  
             if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS)
-                stickers[selectedStickerIndex].scale += 0.05f;  // Aumenta tamanho
+                stickers[selectedStickerIndex].scale += 0.05f;  
 
-            // H/V: Inversão horizontal da textura
+            // H: Inversão horizontal da textura
             if (glfwGetKey(window, GLFW_KEY_H) == GLFW_PRESS) {
                 static double lastFlipH = 0;
                 double now = glfwGetTime();

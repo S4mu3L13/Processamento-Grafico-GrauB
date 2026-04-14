@@ -18,7 +18,7 @@ Aplicação gráfica interativa que permite carregar uma textura de fundo e apli
   - `planta-2.png` - Segunda planta
 - **Sem pré-carregamento visual**: Nenhum adesivo aparece no inicio
 - **Criação por clique**: Selecione o tipo (1-4) e clique na tela para adicionar um adesivo
-- Cada adesivo criado é um retângulo 150x150 com textura mapeada
+- Cada adesivo criado é um retângulo com a textura mapeada
 - Adesivos suportam transformações e operações de flip
 - Fragmentos transparentes são descartados via `discard` no shader
 - **Seleção**: Clique em um adesivo existente para selecioná-lo para edição
@@ -30,7 +30,7 @@ Aplicação gráfica interativa que permite carregar uma textura de fundo e apli
 - **Rotação**: Rotacionar em torno do centro com Q/W
 - **Escala**: Ampliar/reduzir com E/R
 - **Flip**: Virar horizontalmente (H) ou verticalmente (V)
-- **Deseleção**: Clique em área vazia para desselecionar
+- **Deseleção**: Clique novamente no último objeto criado, e depois no vazio para desselecionar
 
 ### 4. **Filtros de Imagem**
 Aplica filtros que afetam tanto o fundo quanto os adesivos:
@@ -56,52 +56,49 @@ Aplica filtros que afetam tanto o fundo quanto os adesivos:
    ./M3.exe
    ```
 
-A aplicação abrirá uma janela de 1024x768 pixels.
-
 ## Controles de Teclado e Mouse
 
 ```
 CRIAÇÃO DE ADESIVOS:
-  1              → Selecionar adesivo tipo 1 (Câmera)
-  2              → Selecionar adesivo tipo 2 (Peixe)
-  3              → Selecionar adesivo tipo 3 (Planta 1)
-  4              → Selecionar adesivo tipo 4 (Planta 2)
-  CLIQUE ESQUERDO→ Criar novo adesivo do tipo selecionado
-                    (ou selecionar adesivo existente para editar)
+  1 → Selecionar adesivo tipo 1 (Câmera)
+  2 → Selecionar adesivo tipo 2 (Peixe)
+  3 → Selecionar adesivo tipo 3 (Planta 1)
+  4 → Selecionar adesivo tipo 4 (Planta 2)
+  CLIQUE ESQUERDO→ Criar novo adesivo do tipo selecionado (ou selecionar adesivo existente para editar)
 
 TRANSFORMAÇÃO DO ADESIVO SELECIONADO:
-  Seta Esquerda  → Mover adesivo para esquerda (-5 px)
-  Seta Direita   → Mover adesivo para direita (+5 px)
-  Seta Cima      → Mover adesivo para cima (-5 px)
-  Seta Baixo     → Mover adesivo para baixo (+5 px)
+  Seta Esquerda → Mover adesivo para esquerda
+  Seta Direita → Mover adesivo para direita
+  Seta Cima → Mover adesivo para cima
+  Seta Baixo → Mover adesivo para baixo
 
 ROTAÇÃO DO ADESIVO SELECIONADO:
-  Q              → Rotacionar no sentido anti-horário (-3°)
-  W              → Rotacionar no sentido horário (+3°)
+  Q → Rotacionar no sentido anti-horário
+  W → Rotacionar no sentido horário
 
 ESCALA DO ADESIVO SELECIONADO:
-  E              → Reduzir escala (-0.05)
-  R              → Aumentar escala (+0.05)
+  E → Reduzir escala
+  R → Aumentar escala
 
 OPERAÇÕES DE FLIP:
-  H              → Inverter horizontalmente (espelhar)
-  V              → Inverter verticalmente (espelhar)
+  H → Inverter horizontalmente
+  V → Inverter verticalmente
 
 FILTROS DE IMAGEM (aplicados globalmente):
-  F1             → Sem filtro (cores naturais)
-  F2             → Filtro de escala de cinza (preto e branco)
-  F3             → Filtro negativo (inverte cores)
-  F4             → Filtro amarelado (tons quentes)
+  F1 → Sem filtro (cores naturais)
+  F2 → Filtro de escala de cinza (preto e branco)
+  F3 → Filtro negativo (inverte cores)
+  F4 → Filtro amarelado (tons quentes)
 
 SISTEMA:
-  ESC            → Sair da aplicação
+  ESC → Sair da aplicação
 ```
 
 ## Resultado Esperado
 
-- Janela 1024x768 com textura de fundo (watercolour_green_background.jpg) preenchendo a tela;
-- Adesivos são criados dinamicamente ao clicar (após selecionar tipo 1-4), posicionados com transparência correta; 
-- Adesivos selecionados podem ser movidos, rotacionados, escalados e invertidos;
-- Filtros (grayscale, negativo, amarelado) aplicam-se globalmente.
+- Janela com textura de fundo preenchendo a tela
+- Adesivos são criados dinamicamente ao clicar (após selecionar tipo 1-4), posicionados com transparência correta
+- Adesivos selecionados podem ser movidos, rotacionados, escalados e invertidos
+- Filtros (grayscale, negativo, amarelado) aplicam-se globalmente
 
 ![Resultado da Execução](M4-gif.gif)
