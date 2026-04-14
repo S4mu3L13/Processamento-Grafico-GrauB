@@ -43,6 +43,7 @@ include_directories(${stb_image_SOURCE_DIR})
 set(EXERCISES
   Exercicios/M2
   Exercicios/M3
+  Exercicios/M4
 )
 
 add_compile_options(-Wno-pragmas)
