@@ -53,7 +53,7 @@ Aplica filtros que afetam tanto o fundo quanto os adesivos:
    ```
    Após a compilação, execute o programa com:
    ```
-   ./M3.exe
+   ./M4.exe
    ```
 
 ## Controles de Teclado e Mouse
