@@ -22,13 +22,13 @@ O objetivo desta atividade é desenvolver um jogo 2D com representação de cen�
 4. **Obstáculos Móveis:**
    - Dois Mushrooms atravessam o mapa em diagonais opostas, formando um "X"
    - Os Mushrooms usam sprites animados e invertem a direção visual conforme o movimento
-   - Se a bruxa encostar em um Mushroom, ocorre derrota.
+   - Se a bruxa encostar em um Mushroom, ocorre derrota
 
 5. **Objetivo do Jogo:**
    - Quatro cristais vermelhos aparecem em posições aleatórias no mapa
    - O jogador deve coletar todos os 4 cristais sem morrer
    - Ao coletar todos os cristais, a tela de vitória é exibida
-   - Ao morrer, a tela de derrota é exibida.
+   - Ao morrer, a tela de derrota é exibida
 
 ## Como Executar
 
