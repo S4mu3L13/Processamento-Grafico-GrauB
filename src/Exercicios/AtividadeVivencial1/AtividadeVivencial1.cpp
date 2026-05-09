@@ -10,8 +10,8 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-const GLint WIDTH = 1000;
-const GLint HEIGHT = 800;
+const GLint WIDTH = 800;
+const GLint HEIGHT = 600;
 
 // Armazena os 3 vértices de cada triângulo e sua cor
 struct Triangle {
